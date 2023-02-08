@@ -15,9 +15,8 @@
   <body>
     <div class="container">
       <div class="header">
-        <div class="header-logo">+</div>
+        <div class="header-logo">✢</div>
         <div class="header-menu-1">
-          <li>Start Page</li>
           <li>Portfolio</li>
           <li>Collections</li>
           <li>Blog</li>
@@ -31,6 +30,7 @@
         <div class="header-hamburger">
           <span></span>
           <span></span>
+          <span></span>
         </div>
       </div>
       <div class="wrapper">
@@ -38,7 +38,7 @@
           <div class="title-logo">
             <img />
           </div>
-          <div class="title">Roma Design Studio</div>
+          <div class="title">Roma ✢ <span>Design Studio</span></div>
         </div>
         <div class="divider"></div>
         <div class="hero-image">
@@ -56,11 +56,12 @@
           <div class="hero-copy">
             <div class="copy-left">
               <div class="btns">
-                <div class="btn">Portfolio</div>
-                <div class="btn">Building</div>
+                <button class="btn">Portfolio</button>
+                <button class="btn">Collections</button>
               </div>
-              <div class="copy">Designed to engage. Built to connect.</div>
+              <div class="copy">Designed to engage.</div>
             </div>
+            <div class="copy-middle">Built to connect.</div>
             <div class="copy-right">
               <div class="copy">Driven by research & strategy</div>
             </div>
@@ -68,6 +69,17 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+      gsap.from(
+        '.header > div, .main-title > div, .divider, .hero-image, .hero-title > div, .btns > div, .hero-copy > div',
+        2,
+        {
+          y: '200',
+          opacity: 0,
+          ease: Expo.easeInOut,
+          stagger: 0.08,
+        }
+      )
+    </script>
   </body>
 </html>
