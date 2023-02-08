@@ -1,9 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-
+  width: 100%;
+  height: 100%;
+  background-color: #0f2fa7;
+  color: #f6f2f2;
+  font-family: 'Hanken Grotesk', sans-serif;
 }
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.header-logo {
+  font-size: 2rem;
+}
+
+.header li {
+  list-style: none;
+}
+
+.header-hamburger {
+  padding: 1em;
+}
+
+.header-hamburger span {
+  display: block;
+  height: 2px;
+  width: 60px;
+  background-color: #f6f2f2;
+}
+
+.header-hamburger span:nth-child(2) {
+  margin-top: 0.5em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 70vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  bottom: 0;
+}
+
+.main-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 8rem;
+  font-weight: 500;
+}
+
+.title {
+  letter-spacing: -4px;
+  padding: 0 0.2em;
+}
+
+.main-title img {
+  position: relative;
+  top: 0.2em;
+}
+
+.divider {
+  width: 100%;
+  height: 5px;
+  margin: 0.5em 0;
+  background-color: #f6f2f2;
+}
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url(https://d2w9rnfcy7mm78.cloudfront.net/19852763/original_87c850a030ae7bca83f809141e713a7c.jpg?1673783312?bc=0)
+    no-repeat 50% 50%;
+  background-size: cover;
+  padding: 1em;
+  height: 500px;
+}
+
+
+.hero-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: 700;
+  color: greenyellow;
+}
+
+.hero-copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 4em;
+}
+
+.copy-left {
+  text-transform: uppercase;
+}
+
+.copy-right {
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.btns {
+  display: flex;
+}
+
+.btn {
+  margin: 0 0.8em 1em 0;
+  padding:  0.3em 0.6em;
+  border: 1px solid #f6f2f2;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f6f2f2;
+  color: black;
+}
+
+@media(max-width: 900px) {
+  .header-menu-1,
+  .header-menu-2 {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 4rem;
+  }
+
+  .hero-title img {
+    display: none;
+  }
+
+  .hero-copy {
+    flex-direction: column;
+    margin-top: 10em;
+  }
+
+  .btns {
+    display: none;
+  }
+
+  .copy-right {
+    text-align: left;
+  }
+ }
+
